@@ -1,11 +1,16 @@
-def check_for_success(command):
+
+#Interating with Camelot by unsing input commands
+def action(input_command):
+    print('start ' + input_command)
+    return check_success(input_command)
+
+#Check with the Camelot whther the command succeeded or failed
+def check_success(input_command):
     while True:
         received = input()
-        if received == 'succeeded ' + command:
+        if received == 'succeeded ' + input_command:
             return True
-        elif received.startswith('failed ' + command):
+        elif received.startswith('failed ' + input_command):
             return False
-
-def action(command):
-    print('start ' + command)
-    return check_for_success(command)
+        elif received.startswith('error ' + input_command):
+            return False
