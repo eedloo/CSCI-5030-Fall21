@@ -1,3 +1,6 @@
+#########Game Setup#########
+#Author: Satish
+
 import start
 class Input():
   def get_inputs():
