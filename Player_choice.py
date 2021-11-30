@@ -1,5 +1,5 @@
 #########Game Setup#########
-#Author: Satish
+#Author: 
 
 import start
 class Input():
