@@ -6,4 +6,4 @@ class Input_Actions:
         for act in self.actions:
             if(act != None):
                 action(act)
-                print(act)
+   
