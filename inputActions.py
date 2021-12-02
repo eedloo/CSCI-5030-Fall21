@@ -1,9 +1,8 @@
-from action import action
-class Input_Actions:
+from action import Action
+class Input_Actions(Action):
     def __init__(self, actions):
         self.actions = actions
 
         for act in self.actions:
             if(act != None):
-                action(act)
-   
+                self.action(act)
