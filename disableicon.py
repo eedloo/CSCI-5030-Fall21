@@ -1,5 +1,5 @@
-from playerchoice import ShowOption
-class DisableIcon(ShowOption):
+
+class DisableIcon:
    def disable_icon(self, option):
        if option == self.opt1:
            inputs = [ 'DisableIcon(' + self.opt1 + ', Tom )' ]
