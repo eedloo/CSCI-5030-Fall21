@@ -1,6 +1,6 @@
 from Communicator import Communicator
 from inputActions import Input_Actions
-from getselectedoption import getSelectedOption
+from selectedoption import getSelectedOption
 class ShowOptions(getSelectedOptions):
    def init(self, opt1, opt2):
        self.opt1 = opt1
