@@ -5,6 +5,7 @@ from Communicator import Communicator
 from inputActions import Input_Actions
 from selectedoption import getSelectedOption
 from disableicon import DisableIcon
+from action import action
 class ShowOptions(getSelectedOptions, DisableIcon):
    def init(self, opt1, opt2):
        self.opt1 = opt1
