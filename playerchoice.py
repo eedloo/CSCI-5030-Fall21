@@ -1,3 +1,6 @@
+####### PSD Project #######
+##### Satish ####
+
 from Communicator import Communicator
 from inputActions import Input_Actions
 from selectedoption import getSelectedOption
@@ -14,9 +17,14 @@ class ShowOptions(getSelectedOptions, DisableIcon):
                ]
        input_acts = Input_Actions(inputs)
        menu.show_menu()
-
-
-#testing player choice, enable_icon and disable_icon 
+ 
+   def get_selected_option(slef):
+       comm = Communication()
+       selected_option = comm.get_input_from_player()
+       return selected_option
+ 
+ 
+#testing player choice, enable_icon and disable_icon
 opt1 = "Forest"
 opt2 = "Bookshelf"
 show_opt = ShowOptions(opt1, opt2)
