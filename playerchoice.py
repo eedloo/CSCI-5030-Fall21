@@ -17,7 +17,6 @@ class ShowOptions(getSelectedOptions, DisableIcon):
                'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() +', Tom, "Go to" '+ self.opt2.islower() + '" )'
                ]
        input_acts = Input_Actions(inputs)
-       menu.show_menu()
  
    def get_selected_option(slef):
        comm = Communication()
