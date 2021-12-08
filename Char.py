@@ -1,17 +1,12 @@
 class Char:
-    name = ''
-    clothing = ''
-    hairStyle = ''
-    hairColor = ''
-    typ = ''
-    init_position = ''
+    def __init__(self, name, clothing, hairStyle, hairColor,  typ, init_position )
+    name = self.name
+    clothing = self.clothing
+    hairStyle = self.hairStyle
+    hairColor = self.hairColor
+    typ = self.typ
+    init_position = self.init_position
 
-    def create_char(self, name, typ, clothing, hairStyle, hairColor, init_position):
-        self.Name = name
-        self.Type = typ
-        self.Clothing = clothing
-        self.HairStyle = hairStyle
-        self.HairColor = hairColor
-        self.init_position = init_position
-        return [f'CreateCharacter({self.Name}, {self.Type})', f'SetClothing({self.Name}, {self.Clothing})',
-                f'SetHairStyle({self.Name}, {self.HairStyle})', f'SetHairColor({self.Name}, {self.HairColor})', f'SetPosition({self.Name}, {self.init_position})']
+    def create_char(self):
+        return [f'CreateCharacter({self.name}, {self.typ})', f'SetClothing({self.name}, {self.clothing})',
+                f'SetHairStyle({self.name}, {self.hairStyle})', f'SetHairColor({self.name}, {self.hairColor})', f'SetPosition({self.name}, {self.init_position})']
