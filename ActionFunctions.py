@@ -26,10 +26,10 @@ class Perform:
         self.furniture = furniture
         return [f'Pickup({self.char1}, {self.item}, {self.furniture})']
 
-    def open_furniture(self, char1, furniture):
-        self.char1 = char1
-        self.furniture = furniture
-        return [f'OpenFurniture({self.char1}, {self.furniture})']
+    # def open_furniture(self, char1, furniture):
+    #    self.char1 = char1
+    #    self.furniture = furniture
+    #    return [f'OpenFurniture({self.char1}, {self.furniture})']
 
     def set_camera(self, char1):
         self.char1 = char1
