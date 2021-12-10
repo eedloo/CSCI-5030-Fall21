@@ -2,10 +2,6 @@
 
 class Action:
 
-    def action(self, input_command):
-        print('start ' + input_command)
-        #return check_success(input_command)
-
     # Check with the Camelot whether the command succeeded or failed
     def check_success(self, input_command):
         while True:
@@ -16,3 +12,9 @@ class Action:
                 return False
             elif received.startswith('error ' + input_command):
                 return False
+
+    def action(self, input_command):
+        print('start ' + input_command)
+        return self.check_success(input_command)
+
+
