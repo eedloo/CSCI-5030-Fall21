@@ -1,23 +1,17 @@
-from action import action
+from inputActions import Input_Actions
 
 
 class Communicator:
+
     def get_input_from_player(self):
+        input_action=Input_Actions()
         while True:
             receivedmsg = input()
             if receivedmsg == 'input Bookshelf Tom':
-                action('DisableIcon("Forest", Tom)')
-                action('DisableIcon("Bookshelf", Tom)')
-                return "Library"
+                return "Bookshelf"
             elif receivedmsg == 'input Forest Tom':
-                action('DisableIcon("Forest", Tom)')
-                action('DisableIcon("Bookshelf", Tom)')
-                return "Farm"
+                return "Forest"
             elif receivedmsg == 'input Book Tom':
-                action('DisableIcon("Sword", Tom)')
-                action('DisableIcon("Book", Tom)')
                 return "Book"
             elif receivedmsg == 'input Sword Tom':
-                action('DisableIcon("Sword", Tom)')
-                action('DisableIcon("Book", Tom)')
                 return "Sword"
