@@ -3,25 +3,37 @@
 
 from Communicator import Communicator
 from inputActions import Input_Actions
-from selectedoption import getSelectedOption
 from disableicon import DisableIcon
 from action import action
-class ShowOptions(getSelectedOptions, DisableIcon):
-   def init(self, opt1, opt2):
-       self.opt1 = opt1
-       self.opt2 = opt2
-   def show_options(self):
-       inputs = [
-               'EnableInput'
-               'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() +', Tom, "Go to" '+ self.opt1.islower() + '" )'
-               'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() +', Tom, "Go to" '+ self.opt2.islower() + '" )'
-               ]
-       input_acts = Input_Actions(inputs)
- 
-   def get_selected_option(slef):
-       comm = Communication()
-       selected_option = comm.get_input_from_player()
-       return selected_option
+
+
+class ShowOptions(DisableIcon):
+    def init(self, opt1, opt2):
+        self.opt1 = opt1
+        self.opt2 = opt2
+
+    def show_options(self):
+        inputs = [
+            'EnableInput'
+            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', 1, "Go to" ' + self.opt1.islower() + '" )'
+            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', 2, "Go to" ' + self.opt1.islower() + '" )'
+            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', 1, "Go to" ' + self.opt2.islower() + '" )'
+            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', 2, "Go to" ' + self.opt2.islower() + '" )'
+        ]
+        input_acts = Input_Actions(inputs)
+
+    def get_selected_option(self):
+        comm = Communicator()
+        selected_option = comm.get_input_from_player()
+        return selected_option
+
+    def walking_to_door(self):
+        option = Communicator()
+        selected_option = option 
+        if option == "Library":
+            return 'WalkTo(Tom, DiningRoom.Door)'
+        else:
+            return 'WalkTo(Tom, DiningRoom.BackDoor)'
  
  
 #testing player choice, enable_icon and disable_icon
