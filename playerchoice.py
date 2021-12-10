@@ -4,8 +4,6 @@
 from Communicator import Communicator
 from inputActions import Input_Actions
 from disableicon import DisableIcon
-from action import action
-
 
 class ShowOptions(DisableIcon):
     def init(self, opt1, opt2):
@@ -29,17 +27,18 @@ class ShowOptions(DisableIcon):
 
     def walking_to_door(self):
         option = Communicator()
-        selected_option = option 
-        if option == "Library":
+        selected = option.get_input_from_player()
+        if selected == "Library":
             return 'WalkTo(Tom, DiningRoom.Door)'
         else:
             return 'WalkTo(Tom, DiningRoom.BackDoor)'
+
  
  
 #testing player choice, enable_icon and disable_icon
-opt1 = "Forest"
-opt2 = "Bookshelf"
-show_opt = ShowOptions(opt1, opt2)
-show_opt.show_options()
-selected_option = show_opt.get_selected_option()
-show_opt.disable_icon(selected_option)
+#opt1 = "Forest"
+#opt2 = "Bookshelf"
+#show_opt = ShowOptions(opt1, opt2)
+#show_opt.show_options()
+#selected_option = show_opt.get_selected_option()
+#show_opt.disable_icon(selected_option)
