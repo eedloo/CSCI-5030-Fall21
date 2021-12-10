@@ -13,10 +13,10 @@ class ShowOptions(DisableIcon):
     def show_options(self):
         inputs = [
             'EnableInput'
-            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', 1, "Go to" ' + self.opt1.islower() + '" )'
-            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', 2, "Go to" ' + self.opt1.islower() + '" )'
-            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', 1, "Go to" ' + self.opt2.islower() + '" )'
-            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', 2, "Go to" ' + self.opt2.islower() + '" )'
+            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', DiningRoom.Door, "Go to" ' + self.opt1.islower() + '" )'
+            'EnableIcon(' + self.opt1 + ', ' + self.opt1.islower() + ', DiningRoom.BackDoor, "Go to" ' + self.opt1.islower() + '" )'
+            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', DiningRoom.Door, "Go to" ' + self.opt2.islower() + '" )'
+            'EnableIcon(' + self.opt2 + ', ' + self.opt2.islower() + ', DiningRoom.BackDoor, "Go to" ' + self.opt2.islower() + '" )'
         ]
         input_acts = Input_Actions(inputs)
 
