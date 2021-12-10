@@ -1,8 +1,8 @@
 from action import Action
-class Input_Actions(Action):
-    def __init__(self, actions):
-        self.actions = actions
+class Input_Actions:
 
-        for act in self.actions:
-            if(act != None):
-                self.action(act)
+    def get_actions(self, actions):
+            action_object = Action()
+            for act in actions:
+                if (act != None):
+                    action_object.action(act)
