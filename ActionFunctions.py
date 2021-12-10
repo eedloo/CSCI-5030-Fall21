@@ -42,6 +42,12 @@ class Perform:
         self.furniture = furniture
         return [f'SetPosition({self.char1}, {self.furniture})']
 
+    def enable_input(self):
+        # enable input to move with WASD and mouse buttons
+        return [f'EnableInput']
+
+
+
 
 
 
